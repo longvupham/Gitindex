@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let aa = [1, 'hello', 'abc', 1000]; // khai báo
+    //mảng bát đầu từ vị trí 0
+    alert(aa[2]); // truy xuất phần tử trong mảng theo vị trí
+    for (let i = 0; i < aa.length; i++) {// duyệt mảng
+        document.write(aa[i] + '<br>')
+    }
+</script>
+<script>
+    let arr = [11, 22, 33, 44, 12, 23, 34];
+    //in ra các phần tử chẵn trong mảng
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 === 0) {
+            document.write(arr[i] + '<br>')
+        }
+    }
+    // in ra các phần tử tại vị trí chẵn trong mảng
+    for (let i = 0; i < arr.length; i++) {
+        if (i % 2 === 0) {
+            document.write(arr[i] + '<br>')
+        }
+    }
+</script>
+<!--tính tổng các phần tử chia hết cho 3 trong mảng-->
+<!--tính tích các phần tử chia hết cho 5 trong mảng-->
+<script>
+    let sum = 0;
+    let mul = 1;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 3 === 0) {
+            sum += arr[i]
+        }
+        if (arr[i] % 5 === 0) {
+            mul *= arr[i]
+        }
+    }
+    document.write(sum);
+    document.write(mul);
+</script>
+<!--Đếm số lượng các số chia hết cho 2 và lớn hơn 30-->
+<script>
+    let dem1 =0;
+    for(let i=0;i<arr.length;i++) {
+        if (arr[i] % 2 === 0 && arr[i]>30) {
+            dem1++;
+        }
+    }
+    document.write('dem1');
+</script>
+<!--tìm phần tử có giá trị lớn nhất-->
+<script>
+    let max = arr[0];
+    for (let i = 0; i < arr.length; i++) {
+        if(max<arr[i]){
+            max=arr[i];
+        }
+    }
+</script>
+<!--tìm phần tử có giá trị nhỏ nhất-->
+<!--tìm số chẵn có giá trị nhỏ nhất-->
+<script>
+    let min=null;
+    for (let i = 0; i < a.length; i++) {
+        if (a[i] % 2 === 0) {
+            if (min === null || a[i] < min) {
+                min = a[i];
+            }
+        }
+    }
+    document.write(min + '<br>');
+</script>
+
+<!--nâng cao: tìm số lớn thứ 2 trong mảng (chỉ dùng 1 vòng lặp for)-->
+<script>
+    let arr = [11, 22, 33, 44, 12, 23, 34]
+    let num1 = arr[0]
+    let num2 = arr[1]
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > num1) {
+            num2 = num1;
+            num1 = arr[i];
+        } else if (arr[i] > num2 && arr[i] < num1) {
+            num2 = arr[i];
+        }
+    }
+    document.write(num2)
+</script>
+nhập vào x, tìm vị trí của x trong mảng, nếu x có thì in ra vị trí, nếu không thì in ra -1
+<script>
+    let arr = [11, 22, 33, 44, 12, 23, 34]
+    let x = +prompt('nhập x')
+    let vitri = -1;
+    for (let i = 0; i < arr.length; i++) {
+        if (x === arr[i]) {
+            vitri=i;
+        }
+    }
+    document.write(vitri);
+</script>
+</body>
+</html>

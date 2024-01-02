@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Cần có tổng 20000 đồng từ 3 loại giấy bạc 1000 đồng, 2000 đồng, 5000 đồng.Lập chương trình để tìm ra tất cả các phương án có thể-->
+<script>
+let tong = 20;
+for (let s5 = 0; s5 <= 20 / 5; s5++){
+    for (let s2 = 0; s2 <= 20 / 2; s2++){
+        let s1 = 20 - s2 * 2 - s5 * 5;
+        if (s1 >= 0){
+document.write(s5 + ',' + s2 + ',' + s1 + '<br>')
+        }
+    }
+}
+</script>
+
+<script>
+    let soNam = +prompt('nhập vào số nam: ')
+    let soNu = +prompt('nhập vào số nu: ')
+
+    if(soNam>soNu){
+        alert('khac gioi'+soNu)
+        alert('dong gioi'+ Math.floor((soNam-soNu)/2))
+    }if(soNam>soNu){
+        alert('khac gioi'+soNu)
+        alert('dong gioi'+ Math.floor((soNam-soNu)/2))
+    }
+
+</script>
+
+
+</body>
+</html>
