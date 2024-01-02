@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [22, 33, 44, 55, 66]
+    arr.push(1)// thêm vào cuối
+    arr.indexOf(44)// tìm kiếm 2
+    arr.indexOf(0)// tìm kiếm -1
+    arr.slice(3, 2);// Xoá từ vị trí 3 đi 2 phần tử => [22,33,44]
+    arr.slice(1, 0, 12);// từ vị trí 1 thêm vào phần tử 12 => 22,12,33,44,55
+    arr [2] = 100; // Sửa
+    arr.concat([1, 2, 3]); // thêm 1 mảng 22,33,44,55,1,2,3
+    arr.join('xx'); // 22xx33xx44xx55xx66
+    '2,3,4,5,6'.split(','); // [2,3,4,5,6]
+
+    // Dùng prompt để nhập các phần tử cho mảng, nhập cho đến khi gặp 0 thì dừng. in ra mảng
+    let arr1 = [];
+    while (true) {
+        let x = +prompt("nhập vào x: ")
+        if (x === 0) {
+            break;
+        }
+        arr1.push(x);
+    }
+    alert(arr1)
+
+    // Dùng prompt để nhập số lượng phần tử trong mảng và nhập các phần tử cho mảng, nhập cho đến khi gặp 0 thì dừng. in ra mảng
+    let arr = [];
+    let sl = +prompt(" nhập vào số lượng phần tử: ")
+    for (let i = 0; i < sl; i++) ;{
+    let x = +prompt("nhập vào phần tử thứ" + i);
+    arr.push(x)
+    }
+    alert(arr);
+
+</script>
+</body>
+</html>
